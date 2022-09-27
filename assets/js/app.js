@@ -130,6 +130,14 @@ $(document).ready(function() {
 		},
 		
 	});
+	$('.filterr').on('click', function() {
+	  var selector = $(this).attr('data-filter');
+	  $('.filtering-item-list').isotope({
+	    filter: selector
+	  });
+	  $('.filtering-area-titles li').removeClass("active");
+	  $(this).addClass("active");
+	});
 });
 
 // filtering area====
